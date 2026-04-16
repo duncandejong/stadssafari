@@ -1,0 +1,133 @@
+.site-width {
+  max-width: var(--site-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section padding utilities in plain CSS (no SCSS/TW v3 directives) */
+.section-padding {
+  padding-left: var(--section-padding-x-sm);
+  padding-right: var(--section-padding-x-sm);
+  padding-top: var(--section-padding-y-sm);
+  padding-bottom: var(--section-padding-y-sm);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: var(--section-padding-x-md);
+    padding-right: var(--section-padding-x-md);
+    padding-top: var(--section-padding-y-md);
+    padding-bottom: var(--section-padding-y-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: var(--section-padding-x-lg);
+    padding-right: var(--section-padding-x-lg);
+    padding-top: var(--section-padding-y-lg);
+    padding-bottom: var(--section-padding-y-lg);
+  }
+}
+
+.section-padding-x {
+  padding-left: var(--section-padding-x-sm);
+  padding-right: var(--section-padding-x-sm);
+}
+
+@media (min-width: 768px) {
+  .section-padding-x {
+    padding-left: var(--section-padding-x-md);
+    padding-right: var(--section-padding-x-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding-x {
+    padding-left: var(--section-padding-x-lg);
+    padding-right: var(--section-padding-x-lg);
+  }
+}
+
+.section-padding-y {
+  padding-top: var(--section-padding-y-sm);
+  padding-bottom: var(--section-padding-y-sm);
+}
+
+@media (min-width: 768px) {
+  .section-padding-y {
+    padding-top: var(--section-padding-y-md);
+    padding-bottom: var(--section-padding-y-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding-y {
+    padding-top: var(--section-padding-y-lg);
+    padding-bottom: var(--section-padding-y-lg);
+  }
+}
+
+.-section-padding {
+  padding-left: calc(var(--section-padding-x-sm) * -1);
+  padding-right: calc(var(--section-padding-x-sm) * -1);
+  padding-top: calc(var(--section-padding-y-sm) * -1);
+  padding-bottom: calc(var(--section-padding-y-sm) * -1);
+}
+
+@media (min-width: 768px) {
+  .-section-padding {
+    padding-left: calc(var(--section-padding-x-md) * -1);
+    padding-right: calc(var(--section-padding-x-md) * -1);
+    padding-top: calc(var(--section-padding-y-md) * -1);
+    padding-bottom: calc(var(--section-padding-y-md) * -1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .-section-padding {
+    padding-left: calc(var(--section-padding-x-lg) * -1);
+    padding-right: calc(var(--section-padding-x-lg) * -1);
+    padding-top: calc(var(--section-padding-y-lg) * -1);
+    padding-bottom: calc(var(--section-padding-y-lg) * -1);
+  }
+}
+
+.-section-padding-x {
+  padding-left: calc(var(--section-padding-x-sm) * -1);
+  padding-right: calc(var(--section-padding-x-sm) * -1);
+}
+
+@media (min-width: 768px) {
+  .-section-padding-x {
+    padding-left: calc(var(--section-padding-x-md) * -1);
+    padding-right: calc(var(--section-padding-x-md) * -1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .-section-padding-x {
+    padding-left: calc(var(--section-padding-x-lg) * -1);
+    padding-right: calc(var(--section-padding-x-lg) * -1);
+  }
+}
+
+.-section-padding-y {
+  padding-top: calc(var(--section-padding-y-sm) * -1);
+  padding-bottom: calc(var(--section-padding-y-sm) * -1);
+}
+
+@media (min-width: 768px) {
+  .-section-padding-y {
+    padding-top: calc(var(--section-padding-y-md) * -1);
+    padding-bottom: calc(var(--section-padding-y-md) * -1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .-section-padding-y {
+    padding-top: calc(var(--section-padding-y-lg) * -1);
+    padding-bottom: calc(var(--section-padding-y-lg) * -1);
+  }
+}

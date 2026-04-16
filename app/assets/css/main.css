@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import "./variables.css";
+@import "./abstracts/font.css";
+@import "./abstracts/base.css";
+@import "./abstracts/layout.css";
+@import "./abstracts/typography.css";
+@import "./components/icons.css";
+@import "./components/cookie.css";
+@import "./components/buttons.css";
+
+
+* {
+    min-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-margin-top);
+}
+
+.clear-fix:before,
+.clear-fix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear-fix:after {
+    clear: both;
+}
+
+.label {
+    padding-top: 0.01em;
+    padding-bottom: 0.01em;
+    /* display: block; */
+}
+
+.scroll-margin-top {
+    scroll-margin-top: var(--scroll-margin-top);
+}

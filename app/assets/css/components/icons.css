@@ -1,0 +1,11 @@
+.kijkwijzer {
+  margin-top: 0.5rem; /* my-2 */
+  margin-bottom: 0.5rem; /* my-2 */
+  display: inline-block;
+  width: auto;
+  height: 2em;
+}
+
+.kijkwijzer .kw-fill {
+  fill: currentColor;
+}

@@ -1,0 +1,215 @@
+html {
+    --cookie-control-barBackground: var(--color-neutral-900);
+    --cookie-control-barButtonBackground: var(--color-white);
+    --cookie-control-barButtonColor: var(--color-neutral-900);
+    --cookie-control-barButtonHoverBackground: var(--color-neutral-700);
+    --cookie-control-barButtonHoverColor: var(--color-white);
+    --cookie-control-barTextColor: var(--color-white);
+    --cookie-control-checkboxActiveBackground: var(--color-neutral-900);
+    --cookie-control-checkboxActiveCircleBackground: var(--color-white);
+    --cookie-control-checkboxDisabledBackground: #ddd;
+    --cookie-control-checkboxDisabledCircleBackground: var(--color-white);
+    --cookie-control-checkboxInactiveBackground: var(--color-neutral-900);
+    --cookie-control-checkboxInactiveCircleBackground: var(--color-white);
+    --cookie-control-controlButtonBackground: var(--color-white);
+    --cookie-control-controlButtonHoverBackground: var(--color-neutral-900);
+    --cookie-control-controlButtonIconColor: var(--color-neutral-900);
+    --cookie-control-controlButtonIconHoverColor: var(--color-white);
+    --cookie-control-focusRingColor: var(--color-primary-light);
+    --cookie-control-modalBackground: var(--color-white);
+    --cookie-control-modalButtonBackground: var(--color-neutral-900);
+    --cookie-control-modalButtonColor: var(--color-white);
+    --cookie-control-modalButtonHoverBackground: var(--color-neutral-500);
+    --cookie-control-modalButtonHoverColor: var(--color-white);
+    --cookie-control-modalOverlay: var(--color-neutral-900);
+    --cookie-control-modalOverlayOpacity: 0.8;
+    --cookie-control-modalTextColor: var(--color-neutral-900);
+    --cookie-control-modalUnsavedColor: var(--color-white);
+}
+
+/* Base wrapper */
+.cookieControl {
+    font-family: var(--font-sans), sans-serif !important;
+}
+
+/* Bar */
+.cookieControl .cookieControl__Bar {
+    font-family: var(--font-sans), sans-serif !important;
+}
+
+/* Bar container and its children */
+.cookieControl .cookieControl__BarContainer {
+    padding: 1rem 1.5rem !important;
+}
+
+.cookieControl .cookieControl__BarContainer h3 {
+    font-family: var(--title-font-family), serif;
+    font-weight: var(--title-font-weight, 800);
+}
+
+.cookieControl .cookieControl__BarContainer p {
+    margin: 0 !important;
+}
+
+/* Bar buttons */
+.cookieControl .cookieControl__BarButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cookieControl .cookieControl__BarButtons button {
+    /* Equivalent of: @apply btn m-0 btn-sm md:btn-md */
+    margin: 0; /* m-0 */
+
+    /* Base button styles (from btn utility) */
+    text-transform: var(--btn-text-transform);
+    font-weight: var(--btn-font-weight);
+    font-family: var(--btn-font-family), serif;
+    border-width: var(--btn-border-width);
+
+    /* Defaults for color system */
+    --btn-color: var(--color-neutral-700);
+    --btn-color-hover: var(--color-neutral-900);
+    --btn-text: var(--color-white);
+    --btn-text-hover: var(--color-white);
+    --btn-bg-opacity: 1;
+    --btn-bg: var(--btn-color) / var(--btn-bg-opacity);
+    --btn-border: var(--btn-color);
+
+    color: var(--btn-text);
+    border-color: var(--btn-border);
+    background-color: var(--btn-bg);
+
+    /* Layout from @apply list */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1.375; /* leading-snug */
+    text-decoration: none;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: var(--btn-gap, 0.25em);
+    border-radius: var(--btn-border-radius);
+
+    /* Size: btn-sm */
+    padding: 0.25rem 0.625rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .cookieControl .cookieControl__BarButtons button {
+        /* Size: md:btn-md */
+        padding: 0.375rem 0.875rem;
+        font-size: 1rem;
+    }
+}
+
+.cookieControl .cookieControl__BarButtons button:hover {
+    color: var(--btn-text);
+    border-color: var(--btn-border);
+    background-color: var(--btn-bg);
+}
+
+.cookieControl .cookieControl__BarButtons button:active {
+    opacity: var(--btn-active-opacity, 0.88);
+}
+
+.cookieControl .cookieControl__BarButtons button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--focus-shadow-clr);
+}
+
+.cookieControl .cookieControl__BarButtons button:disabled,
+.cookieControl .cookieControl__BarButtons button.disabled {
+    --btn-color: var(--color-neutral-200) !important;
+    --btn-text: var(--color-neutral-400) !important;
+    cursor: not-allowed;
+    box-shadow: none;
+    text-decoration: line-through;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cookieControl .cookieControl__BarButtons button + button {
+    margin-left: 0 !important;
+}
+
+/* Modal content tweaks */
+.cookieControl .cookieControl__ModalContent input + button:hover {
+    background-color: var(--color-primary);
+}
+
+/* Modal buttons */
+.cookieControl .cookieControl__ModalButtons button {
+    /* Equivalent of: @apply btn */
+    text-transform: var(--btn-text-transform);
+    font-weight: var(--btn-font-weight);
+    font-family: var(--btn-font-family), serif;
+    border-width: var(--btn-border-width);
+
+    --btn-color: var(--color-neutral-700);
+    --btn-color-hover: var(--color-neutral-900);
+    --btn-text: var(--color-white);
+    --btn-text-hover: var(--color-white);
+    --btn-bg-opacity: 1;
+    --btn-bg: var(--btn-color) / var(--btn-bg-opacity);
+    --btn-border: var(--btn-color);
+
+    color: var(--btn-text);
+    border-color: var(--btn-border);
+    background-color: var(--btn-bg);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1.375;
+    text-decoration: none;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: var(--btn-gap, 0.25em);
+    border-radius: var(--btn-border-radius);
+
+    /* Use medium sizing */
+    padding: 0.375rem 0.875rem;
+    font-size: 1rem;
+}
+
+/* Modal close button */
+.cookieControl .cookieControl__ModalClose {
+    /* Equivalent of: @apply btn */
+    text-transform: var(--btn-text-transform);
+    font-weight: var(--btn-font-weight);
+    font-family: var(--btn-font-family), serif;
+    border-width: var(--btn-border-width);
+
+    --btn-color: var(--color-neutral-700);
+    --btn-color-hover: var(--color-neutral-900);
+    --btn-text: var(--color-white);
+    --btn-text-hover: var(--color-white);
+    --btn-bg-opacity: 1;
+    --btn-bg: var(--btn-color) / var(--btn-bg-opacity);
+    --btn-border: var(--btn-color);
+
+    color: var(--btn-text);
+    border-color: var(--btn-border);
+    background-color: var(--btn-bg);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1.375;
+    text-decoration: none;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: var(--btn-gap, 0.25em);
+    border-radius: var(--btn-border-radius);
+
+    padding: 0.375rem 0.875rem;
+    font-size: 1rem;
+}

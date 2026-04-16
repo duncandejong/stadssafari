@@ -1,0 +1,68 @@
+body {
+    font-family: var(--body-font-family), serif;
+    font-weight: var(--body-font-weight);
+}
+
+.font-heading {
+    font-family: var(--headings-font-family), serif;
+    font-weight: var(--headings-font-weight, 800);
+}
+
+.font-title {
+    font-family: var(--title-font-family), serif;
+    font-weight: var(--title-font-weight, 800);
+}
+
+.section-heading {
+    font-size: 2rem; /* text-4xl */
+    margin-bottom: 0.5rem; /* mb-2 */
+    line-height: 1.375; /* leading-snug */
+    font-family: var(--headings-font-family), serif;
+    font-weight: var(--headings-font-weight, 800);
+    text-transform: var(--headings-text-transform, none);
+    align-items: baseline;
+}
+
+@media (min-width: 768px) {
+    /* md */
+    .section-heading {
+        font-size: 2.5rem; /* text-5xl */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* lg */
+    .section-heading {
+        font-size: 3rem; /* text-6xl */
+    }
+}
+
+.prose {
+    line-height: 1.5;
+}
+
+.prose p {
+    margin-bottom: 0.75em;
+    margin-top: 0.75em;
+}
+
+.prose .lead {
+    font-size: 1.125em; /* text-lg */
+    line-height: 1.675;
+    font-weight: var(--lead-font-weight, var(--body-font-weight));
+}
+
+.credits {
+    font-size: 0.875rem; /* text-sm */
+}
+
+@media (min-width: 768px) {
+    /* md */
+    .credits {
+        font-size: 1rem; /* text-base */
+    }
+}
+
+mark {
+    background-color: hsl(var(--color-secondary-lighter));
+}

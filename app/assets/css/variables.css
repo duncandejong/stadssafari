@@ -1,0 +1,170 @@
+@theme {
+    /* Colors */
+    --color-primary-lightest: hsl(57, 81%, 94%);
+    --color-primary-lighter: hsl(56, 92%, 79%);
+    --color-primary-light: hsl(57, 98%, 70%);
+    --color-primary: hsl(57, 74%, 52%);
+    --color-primary-dark: hsl(56, 50%, 48%);
+    --color-primary-darker: hsl(55, 46%, 38%);
+    --color-primary-darkest: hsl(54, 70%, 15%);
+
+    --color-secondary-lightest: hsl(170, 30%, 97%);
+    --color-secondary-lighter: hsl(170, 30%, 88%);
+    --color-secondary-light: hsl(170, 30%, 68%);
+    --color-secondary: hsl(170, 39%, 42%);
+    --color-secondary-dark: hsl(170, 39%, 35%);
+    --color-secondary-darker: hsl(170, 35%, 29%);
+    --color-secondary-darkest: hsl(170, 30%, 18%);
+
+
+    --color-tertiary-lightest: hsl(106, 34%, 96%);
+    --color-tertiary-lighter: hsl(106, 34%, 88%);
+    --color-tertiary-light: hsl(106, 34%, 67%);
+    --color-tertiary: hsl(106, 34%, 50%);
+    --color-tertiary-dark: hsl(106, 34%, 34%);
+    --color-tertiary-darker: hsl(106, 34%, 20%);
+    --color-tertiary-darkest: hsl(106, 34%, 11%);
+
+    --color-danger-lighter: hsl(6deg 100% 90%);
+    --color-danger-light: hsl(9deg 98% 60%);
+    --color-danger: hsl(6deg 95% 50%);
+    --color-danger-dark: hsl(6deg 100% 40%);
+    --color-danger-darker: hsl(6deg 100% 20%);
+
+    --color-neutral-950: hsl(60deg 25% 5%);
+    --color-neutral-900: hsl(60deg 20% 11%);
+    --color-neutral-800: hsl(60deg 20% 17%);
+    --color-neutral-700: hsl(60deg 15% 27%);
+    --color-neutral-600: hsl(60deg 15% 34%);
+    --color-neutral-500: hsl(60deg 12% 50%);
+    --color-neutral-400: hsl(60deg 10% 65%);
+    --color-neutral-300: hsl(60deg 10% 84%);
+    --color-neutral-200: hsl(60deg 10% 91%);
+    --color-neutral-100: hsl(60deg 15% 96%);
+    --color-neutral-50: hsl(60deg 20% 98%);
+
+    --color-gray-950: hsl(39deg 0% 5%);
+    --color-gray-900: hsl(39deg 0% 11%);
+    --color-gray-800: hsl(39deg 0% 17%);
+    --color-gray-700: hsl(39deg 0% 27%);
+    --color-gray-600: hsl(39deg 0% 34%);
+    --color-gray-500: hsl(39deg 0% 50%);
+    --color-gray-400: hsl(39deg 0% 65%);
+    --color-gray-300: hsl(39deg 0% 84%);
+    --color-gray-200: hsl(39deg 0% 91%);
+    --color-gray-100: hsl(39deg 0% 96%);
+    --color-gray-50: hsl(39deg 0% 98%);
+
+    --color-white: hsl(0deg 0% 100%);
+    --color-black: hsl(0deg 0% 0%);
+
+    /* Fonts */
+    --font-sans: "Barlow Condensed", "Modern Antiqua", ui-sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-alt: "Plus Jakarta Sans", "Modern Antiqua", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+    /* Site Width */
+    --site-width: 1200px;
+    --site-bg-clr: hsl(var(--color-white));
+
+    /* Border Radius */
+    --border-radius-sm: 0.1em;
+    --border-radius-md: 0.2em;
+    --border-radius-lg: 0.4em;
+    --border-radius-xl: 0.6em;
+    --border-radius-full: 9999px;
+
+    /* Section Padding */
+    --section-padding-x-sm: 1rem;
+    --section-padding-x-md: 1.5rem;
+    --section-padding-x-lg: var(--section-padding-x-md);
+    --section-padding-y-sm: 2.5rem;
+    --section-padding-y-md: 3.5rem;
+    --section-padding-y-lg: var(--section-padding-y-md);
+
+    /* Scroll margin top
+       if there is a fixed header, set the scroll margin top to the height of the header */
+    --scroll-margin-top: 0rem;
+}
+
+
+body {
+    --body-text-color: var(--color-neutral-800);
+    /* Typography */
+    --body-font-family: var(--font-alt);
+    --body-font-weight: 400;
+    --lead-font-weight: 500;
+    --title-font-family: var(--font-alt);
+    --title-font-weight: 700;
+    --headings-font-family: var(--font-alt);
+    --headings-font-weight: 800;
+    --headings-text-transform: lowercase;
+
+    /* Buttons */
+    --btn-font-family: var(--font-alt);
+    --btn-font-weight: 700;
+    --btn-text-transform: lowercase;
+    --btn-border-width: 1px;
+    --btn-border-radius: var(--border-radius-md);
+    --btn-padding-x: 0.5em;
+    --btn-padding-y: 0.35em;
+    --btn-gap: 0.25em;
+    --btn-active-opacity: 0.88;
+    --focus-shadow-clr: var(--color-primary);
+
+    /* Size defaults (can be overridden) */
+    --btn-padding-x-xs: 0.375em;
+    --btn-padding-y-xs: 0.125em;
+    --btn-padding-x-sm: 0.5em;
+    --btn-padding-y-sm: 0.175em;
+    --btn-padding-x-md: 0.625em;
+    --btn-padding-y-md: 0.25em;
+    --btn-padding-x-lg: 0.7em;
+    --btn-padding-y-lg: 0.3em;
+    --btn-padding-x-xl: 0.7em;
+    --btn-padding-y-xl: 0.325em;
+    --btn-padding-x-2xl: 0.8em;
+    --btn-padding-y-2xl: 0.4em;
+
+    /* Variant colors */
+    --btn-color-default: var(--color-neutral-700);
+    --btn-color-hover-default: var(--color-neutral-900);
+    --btn-text-default: var(--color-neutral-900);
+    --btn-text-hover-default: var(--color-neutral-950);
+
+    --btn-primary: var(--color-primary);
+    --btn-primary-hover: var(--color-primary-light);
+    --btn-primary-text: var(--btn-text-default);
+    --btn-primary-text-hover: var(--btn-text-hover-default);
+
+    --btn-secondary: var(--color-secondary);
+    --btn-secondary-hover: var(--color-secondary-dark);
+    --btn-secondary-text: var(--btn-text-default);
+    --btn-secondary-text-hover: var(--btn-text-hover-default);
+
+    --btn-tertiary: var(--color-tertiary);
+    --btn-tertiary-hover: var(--color-tertiary-dark);
+    --btn-tertiary-text: var(--btn-text-default);
+    --btn-tertiary-text-hover: var(--btn-text-hover-default);
+
+    --btn-danger: var(--color-danger);
+    --btn-danger-hover: var(--color-danger-dark);
+    --btn-danger-text: var(--btn-text-default);
+    --btn-danger-text-hover: var(--btn-text-hover-default);
+
+    --btn-white: var(--color-white);
+    --btn-white-hover: var(--color-white);
+    --btn-white-text: var(--color-neutral-900);
+    --btn-white-text-hover: var(--color-neutral-950);
+
+    /* Outline/Ghost specific overrides */
+    --btn-outline-text: var(--btn-color);
+    --btn-outline-text-hover: var(--btn-color-hover);
+}

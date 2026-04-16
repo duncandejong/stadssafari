@@ -1,0 +1,5 @@
+body,
+.bg-body {
+  background-color: var(--site-bg-clr, #fff);
+  color: var(--body-text-color, #222);
+}
