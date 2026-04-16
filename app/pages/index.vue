@@ -15,6 +15,12 @@
   -->
 
   <Hero vimeo-id="1183643378">
+    <NuxtImg
+        src="/hopper-1.png"
+        alt="Hopper"
+        class="w-20 md:w-24 lg:w-32 absolute top-4 right-4 z-10"
+        loading="lazy"
+    />
     <ClientOnly>
       <!--      <div
                 class="label self-end  hidden sm:flex absolute mt-0  flex-col gap-2">
@@ -114,7 +120,13 @@
 
 
   <section
-      class="text-center px-3 py-2 md:px-4 md:py-2.5 bg-secondary-dark text-white">
+      class="text-center px-3 py-2 md:px-4 md:py-2.5 bg-secondary-dark text-white relative">
+    <NuxtImg
+        src="/bee-1.png"
+        alt="Bee"
+        class="w-8 md:w-12 lg:w-16 absolute bottom-4 right-1/6 -translate-x-1/2 translate-y-full z-10"
+        loading="lazy"
+    />
     <div class="site-width">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
         <span class="inline-block">Van de makers van <i
@@ -173,7 +185,13 @@
   </section>
 
   <section
-      class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-tertiary-dark to-tertiary-darker  text-white">
+      class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-tertiary-dark to-tertiary-darker text-white relative">
+    <NuxtImg
+        src="/hopper-2.png"
+        alt="Hopper"
+        class="w-24 md:w-32 lg:w-40 absolute top-1 -translate-y-full z-10"
+        loading="lazy"
+    />
     <h2 class="text-4xl md:text-4xl lg:text-5xl font-title leading-tight text-primary-light">
       Kijk anders, zie meer!
       <!--      <ClientOnly>-->
@@ -202,6 +220,12 @@
 
   </section>
   <section id="gallery" class="section-padding section-gallery relative bg-white">
+    <NuxtImg
+        src="/bee-2.png"
+        alt="Bee"
+        class="w-12 md:w-16 lg:w-20 absolute top-0 left-4 md:left-8 -translate-y-1/2 z-10"
+        loading="lazy"
+    />
     <div class="site-width">
       <h3 class="section-heading inline-flex text-primary-light">
         Foto's</h3>
@@ -311,6 +335,6 @@ const galleryImages = [
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  //overflow: hidden;
 }
 </style>
