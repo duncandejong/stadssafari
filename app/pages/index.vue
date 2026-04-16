@@ -118,7 +118,7 @@
     <div class="site-width">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
         Theatercollege van de makers van <i class="text-secondary-lighter font-serif">De Nieuwe Wildernis</i> en <i
-          class="text-primary-lighter font-serif">De Wilde
+          class="text-secondary-lighter font-serif">De Wilde
         Noordzee</i></h2>
     </div>
   </section>
@@ -173,7 +173,7 @@
 
   <section
       class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-tertiary-dark to-tertiary-darker  text-white">
-    <h2 class="text-4xl md:text-4xl lg:text-5xl font-title leading-tight text-primary-lightest">
+    <h2 class="text-4xl md:text-4xl lg:text-5xl font-title leading-tight text-primary-light">
       Kijk anders, zie meer!
       <!--      <ClientOnly>-->
       <!--        <span v-if="isAfterRelease">Nu</span><span v-else>{{ formatDate(movie.releaseDate, 'dayMonth') }}</span>-->
@@ -202,7 +202,7 @@
   </section>
   <section id="gallery" class="section-padding section-gallery relative bg-white">
     <div class="site-width">
-      <h3 class="section-heading inline-flex text-primary-lighter">
+      <h3 class="section-heading inline-flex text-primary-light">
         Foto's</h3>
     </div>
     <div class="site-width">
