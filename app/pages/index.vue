@@ -117,9 +117,10 @@
       class="text-center px-3 py-2 md:px-4 md:py-2.5 bg-secondary-dark text-white">
     <div class="site-width">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
-        Theatercollege van de makers van <i class="text-secondary-lighter font-serif">De Nieuwe Wildernis</i> en <i
-          class="text-secondary-lighter font-serif">De Wilde
-        Noordzee</i></h2>
+        <span class="inline-block">Van de makers van <i
+            class="text-secondary-lighter font-serif">De Nieuwe Wildernis</i></span>
+        <span class="inline-block">&nbsp;en <i class="text-secondary-lighter font-serif">De Wilde Noordzee</i></span>
+      </h2>
     </div>
   </section>
 
