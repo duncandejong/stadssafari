@@ -8,7 +8,7 @@
     --color-primary-darker: hsl(55, 46%, 38%);
     --color-primary-darkest: hsl(54, 70%, 15%);
 
-    --color-secondary-lightest: hsl(170, 30%, 97%);
+    --color-secondary-lightest: hsl(170, 30%, 95%);
     --color-secondary-lighter: hsl(170, 30%, 88%);
     --color-secondary-light: hsl(170, 30%, 68%);
     --color-secondary: hsl(170, 39%, 42%);
@@ -67,6 +67,10 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
     Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "PT Serif", "Modern Antiqua", ui-sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 :root {
@@ -102,7 +106,7 @@ body {
     --body-font-weight: 400;
     --lead-font-weight: 500;
     --title-font-family: var(--font-alt);
-    --title-font-weight: 700;
+    --title-font-weight: 800;
     --headings-font-family: var(--font-alt);
     --headings-font-weight: 800;
     --headings-text-transform: lowercase;

@@ -78,6 +78,9 @@ export default defineNuxtConfig({
                 wght: [300, 400, 500, 600, 700, 800],
                 // ital: [400, 900],
             },
+            "PT+Serif": {
+                wght: [800]
+            }
         },
         display: "swap", // 'auto' | 'block' | 'swap' | 'fallback' | 'optional',
     },

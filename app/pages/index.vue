@@ -34,7 +34,7 @@
           :alt="movie.title"
           :src="movie.titleImage"
           sizes="sm:500px lg:1000px"
-          class="mt-12 w-[90%] sm:w-[80%] flex justify-center object-contain flex-col items-center max-h-[50vh] min-h-[200px]"
+          class="mt-12 w-[60%] sm:w-[50%] flex justify-center object-contain flex-col items-center max-h-[50vh] min-h-50 drop-shadow-xl"
           format="avif,webp"
           loading="lazy"
       />
@@ -114,10 +114,12 @@
 
 
   <section
-      class="text-center px-3 py-2 md:px-4 md:py-2.5 bg-neutral-700 text-white">
+      class="text-center px-3 py-2 md:px-4 md:py-2.5 bg-secondary-dark text-white">
     <div class="site-width">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
-        Theatercollege van de makers van De Nieuwe Wildernis en De Wilde Noordzee</h2>
+        Theatercollege van de makers van <i class="text-secondary-lighter font-serif">De Nieuwe Wildernis</i> en <i
+          class="text-primary-lighter font-serif">De Wilde
+        Noordzee</i></h2>
     </div>
   </section>
 
@@ -142,7 +144,7 @@
         <div class="md:order-2 md:col-span-2 p-4 md:p-0">
           <!--          <h3 class="text-xl md:text-2xl font-semibold text-secondary">-->
           <!--            Een meedogenloze jacht op succes.</h3>-->
-          <div class="prose lg:text-lg">
+          <div class="prose lg:text-lg  font-serif">
             <p class="lead">
               Een echte safari speelt zich niet af in een verre jungle. De meest verrassende natuur vindt u gewoon om de
               hoek, in uw achtertuin of balkon, op het dak van uw woning of in de spleten van het trottoir in uw straat
@@ -150,10 +152,11 @@
             <p>
               Bioloog Luc Hoogenstein bewijst het in Ecolopolis: Stadssafari, een meeslepend theatercollege van
               de makers van de bioscoophits De Nieuwe Wildernis en De Wilde Noordzee. Met nooit eerder vertoonde
-              natuurbeelden neemt Hoogenstein u mee op een reis door de verborgen wereld van de stadsnatuur. Verhalen
-              over schimmels die vliegen in zombies veranderen tot mieren die bladluizen houden als vee, van
+              natuurbeelden neemt Hoogenstein u mee op een reis door de verborgen wereld van de stadsnatuur. </p>
+            <p>Verhalen over schimmels die vliegen in zombies veranderen tot mieren die bladluizen houden als vee, van
               spectaculair jagende slechtvalken boven de skyline tot egelfamilies onder de heg. En van de meer dan
-              duizend soorten die hij ontdekte in zijn eigen stadstuintje in Utrecht. Stadssafari is een avond vol
+              duizend soorten die hij ontdekte in zijn eigen stadstuintje in Utrecht. </p>
+            <p>Stadssafari is een avond vol
               verwondering, humor en herkenning. Na afloop kijkt u nooit meer op dezelfde manier naar uw eigen
               straat. </p>
           </div>
@@ -169,8 +172,8 @@
   </section>
 
   <section
-      class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-primary-darker to-primary-darkest  text-white">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
+      class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-tertiary-dark to-tertiary-darker  text-white">
+    <h2 class="text-4xl md:text-4xl lg:text-5xl font-title leading-tight text-primary-lightest">
       Kijk anders, zie meer!
       <!--      <ClientOnly>-->
       <!--        <span v-if="isAfterRelease">Nu</span><span v-else>{{ formatDate(movie.releaseDate, 'dayMonth') }}</span>-->
@@ -180,7 +183,7 @@
   </section>
 
   <section id="tickets"
-           class="section-padding bg-neutral-100">
+           class="section-padding bg-secondary-lighter">
     <ClientOnly>
       <FloatingButton/>
     </ClientOnly>
@@ -189,7 +192,7 @@
         Tickets
         <Icon name="ion:ticket" class="icon"/>
       </h3>
-      <div class=" sm:text-base md:text-lg lg:text-lg relative z-10">
+      <div class=" sm:text-base md:text-lg lg:text-lg relative z-10  font-serif">
         <div>
           Hier komen de tickets
         </div>
