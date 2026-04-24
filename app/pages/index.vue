@@ -14,7 +14,7 @@
     />
   -->
 
-  <Hero vimeo-id="1183643378">
+  <Hero vimeo-id="1185871702">
     <NuxtImg
         src="/hopper-1.png"
         alt="Hopper"
@@ -159,19 +159,19 @@
           <!--            Een meedogenloze jacht op succes.</h3>-->
           <div class="prose lg:text-lg  font-serif">
             <p class="lead">
-              Een echte safari speelt zich niet af in een verre jungle. De meest verrassende natuur vindt u gewoon om de
-              hoek, in uw achtertuin of balkon, op het dak van uw woning of in de spleten van het trottoir in uw straat
-              en stad. </p>
+              Stel je voor: je loopt door de stad en je ziet beton, asfalt, verkeer. Maar wat als je wist dat er onder
+              je voeten, boven je hoofd en om je heen een complete wildernis schuilgaat? Mieren die bladluizen houden
+              zoals boeren hun vee. Vleermuizen en nachtvlinders die in het donker je straat overnemen. En het
+              onvergetelijke geluid van vrijende egels in je achtertuin. <br>De stad is wilder dan je denkt.</p>
             <p>
-              Bioloog Luc Hoogenstein bewijst het in Ecolopolis: Stadssafari, een meeslepend theatercollege van
-              de makers van de bioscoophits De Nieuwe Wildernis en De Wilde Noordzee. Met nooit eerder vertoonde
-              natuurbeelden neemt Hoogenstein u mee op een reis door de verborgen wereld van de stadsnatuur. </p>
-            <p>Verhalen over schimmels die vliegen in zombies veranderen tot mieren die bladluizen houden als vee, van
-              spectaculair jagende slechtvalken boven de skyline tot egelfamilies onder de heg. En van de meer dan
-              duizend soorten die hij ontdekte in zijn eigen stadstuintje in Utrecht. </p>
-            <p>Stadssafari is een avond vol
-              verwondering, humor en herkenning. Na afloop kijkt u nooit meer op dezelfde manier naar uw eigen
-              straat. </p>
+              In Stadssafari neemt bioloog Luc Hoogenstein je mee op een ongekende reis door de natuur in je eigen stad.
+              Met adembenemende beelden, meeslepende verhalen en een flinke dosis humor opent hij je ogen voor een
+              wereld die altijd al om je heen was. Na dit theatercollege zul je nooit meer op dezelfde manier door je
+              straat lopen.</p>
+            <p>Stadssafari is een productie van MN Media, de makers van De Wilde Noordzee, De Nieuwe Wildernis en Onder
+              het Maaiveld. Voor het eerst brengen zij hun kenmerkende blik op de natuur van het grote doek naar het
+              theater. Het resultaat? Een avond die je raakt, verrast en anders naar buiten laat lopen.
+            </p>
           </div>
           <!--          <div class="credits flex flex-row gap-1">
                       <LazySvgoKijkwijzerLeeftijd12 class="kijkwijzer"/>
@@ -213,7 +213,7 @@
       </h3>
       <div class=" sm:text-base md:text-lg lg:text-lg relative z-10  font-serif">
         <div>
-          Hier komen de tickets
+          De kaartverkoop voor Stadssafari gaat binnenkort van start. Houd deze pagina in de gaten.
         </div>
       </div>
     </div>
@@ -299,7 +299,15 @@ const isAfterRelease = computed(() => new Date() >= movie.releaseDate)
 const footerLogos = [
   {img: "/logo-mn-media-white.png", alt: "MN Media"},
   {img: "/logo-impact-entertainment.png", alt: "Impact Entertainment"},
-  {img: "/logo-ecopolis.png", alt: "Ecopolis"}
+  {img: "/logo-ecopolis.png", alt: "Ecopolis"},
+  {img: "/logo-bpd-cultuurfonds.png", alt: "BPD Cultuurfonds"},
+  {img: "/logo-gemeente-amsterdam.png", alt: "Gemeente Amsterdam"},
+  {img: "/logo-green-choice.png", alt: "Green Choice"},
+  {img: "/logo-greenlabel.png", alt: "Greenlabel"},
+  {img: "/logo-on-the-move-to.png", alt: "On the move to"},
+  {img: "/logo-provincie-zuid-holland.png", alt: "Provincie Zuid Holland"},
+  {img: "/logo-tauw.png", alt: "Tauw"},
+  {img: "/logo-the-greenlabel-institute.png", alt: "The Greenlabel Institute"},
 ];
 const galleryImages = [
   {
@@ -320,6 +328,10 @@ const galleryImages = [
   },
   {
     img: "/stadssafari-05.jpg",
+    alt: "Stadssafari"
+  },
+  {
+    img: "/stadssafari-06.jpg",
     alt: "Stadssafari"
   }
 ];
