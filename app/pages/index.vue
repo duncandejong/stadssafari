@@ -129,9 +129,9 @@
     />
     <div class="site-width">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-title leading-tight">
-        <span class="inline-block">Van de makers van <i
-            class="text-secondary-lighter font-serif">De Nieuwe Wildernis</i></span>
-        <span class="inline-block">&nbsp;en <i class="text-secondary-lighter font-serif">De Wilde Noordzee</i></span>
+        Van de makers van <br class="md:hidden"/><i
+          class="text-secondary-lighter font-serif whitespace-nowrap">De Nieuwe Wildernis</i>
+        en <i class="text-secondary-lighter font-serif whitespace-nowrap">De Wilde Noordzee</i>
       </h2>
     </div>
   </section>
@@ -170,7 +170,8 @@
               Stel je voor: je loopt door de stad en je ziet beton, asfalt, verkeer. Maar wat als je wist dat er onder
               je voeten, boven je hoofd en om je heen een complete wildernis schuilgaat? Mieren die bladluizen houden
               zoals boeren hun vee. Vleermuizen en nachtvlinders die in het donker je straat overnemen. En het
-              onvergetelijke geluid van vrijende egels in je achtertuin. <br>De stad is wilder dan je denkt.</p>
+              onvergetelijke geluid van vrijende egels in je achtertuin. <br><strong>De stad is wilder dan je
+              denkt.</strong></p>
             <p>
               In Stadssafari neemt bioloog Luc Hoogenstein je mee op een ongekende reis door de natuur in je eigen stad.
               Met adembenemende beelden, meeslepende verhalen en een flinke dosis humor opent hij je ogen voor een
@@ -193,9 +194,9 @@
   </section>
 
   <section class="section-padding bg-neutral-100" id="over-luc">
-    <div class="site-width">
+    <div class="site-width max-w-225">
       <div class="grid md:grid-cols-3 gap-4 items-center">
-        <div class="md:col-span-1 justify-center items-center flex">
+        <div class="md:col-span-1 md:order-2 justify-center items-center flex">
           <NuxtImg
               src="/luc-hoogenstein.jpg"
               alt="Luc Hoogenstein"
@@ -205,7 +206,7 @@
               loading="lazy"
           />
         </div>
-        <div class="md:col-span-2 p-4">
+        <div class="md:col-span-2 md:order-1 p-4">
           <h3 class="text-2xl md:text-3xl font-title text-secondary-dark">Over Luc</h3>
           <div class="prose lg:text-lg font-serif">
             <p>
@@ -333,17 +334,18 @@ const movie = {
 const isAfterRelease = computed(() => new Date() >= movie.releaseDate)
 
 const footerLogos = [
-  {img: "/logo-mn-media-white.png", alt: "MN Media"},
+
   {img: "/logo-impact-entertainment.png", alt: "Impact Entertainment"},
   {img: "/logo-ecopolis.png", alt: "Ecopolis"},
   {img: "/logo-bpd-cultuurfonds.png", alt: "BPD Cultuurfonds"},
   {img: "/logo-gemeente-amsterdam.png", alt: "Gemeente Amsterdam"},
   {img: "/logo-green-choice.png", alt: "Green Choice"},
   {img: "/logo-greenlabel.png", alt: "Greenlabel"},
+  {img: "/logo-the-greenlabel-institute.png", alt: "The Greenlabel Institute"},
   {img: "/logo-on-the-move-to.png", alt: "On the move to"},
   {img: "/logo-provincie-zuid-holland.png", alt: "Provincie Zuid Holland"},
   {img: "/logo-tauw.png", alt: "Tauw"},
-  {img: "/logo-the-greenlabel-institute.png", alt: "The Greenlabel Institute"},
+  {img: "/logo-mn-media-white.png", alt: "MN Media"},
 ];
 const galleryImages = [
   {
