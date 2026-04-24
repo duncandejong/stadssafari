@@ -192,6 +192,34 @@
     </div>
   </section>
 
+  <section class="section-padding bg-neutral-100" id="over-luc">
+    <div class="site-width">
+      <div class="grid md:grid-cols-3 gap-4 items-center">
+        <div class="md:col-span-1 justify-center items-center flex">
+          <NuxtImg
+              src="/luc-hoogenstein.jpg"
+              alt="Luc Hoogenstein"
+              sizes="sm:300px md:500px"
+              format="avif,webp"
+              class="w-full rounded-lg shadow-lg max-w-[50vw]"
+              loading="lazy"
+          />
+        </div>
+        <div class="md:col-span-2 p-4">
+          <h3 class="text-2xl md:text-3xl font-title text-secondary-dark">Over Luc</h3>
+          <div class="prose lg:text-lg font-serif">
+            <p>
+              Luc Hoogenstein is bioloog, presentator, natuurfotograaf, columnist en schrijver van diverse natuurboeken,
+              waaronder het veel geprezen ‘Mijn 1000 soortentuin’, over de adembenemende natuur in zijn eigen stadstuin.
+              Luc is met regelmaat te gast in een verscheidenheid aan tv- en radioprogramma’s, waaronder Vroege Vogels.
+              Hij heeft in het verleden onder andere gewerkt bij Natuurmonumenten en Vogelbescherming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section
       class="text-center flex flex-col justify-center items-center px-3 py-2 md:px-4 md:py-3 bg-linear-to-r from-tertiary-dark to-tertiary-darker text-white relative">
     <NuxtImg
@@ -231,7 +259,7 @@
     <NuxtImg
         src="/bee-2.png"
         alt="Bee"
-        class="w-12 md:w-16 lg:w-20 absolute top-0 left-4 md:left-8 -translate-y-1/2 z-10"
+        class="w-12 md:w-16 lg:w-20 absolute top-0 left-4 md:left-8 -translate-y-1/2 z-10 animate-hover"
         loading="lazy"
     />
     <div class="site-width">
@@ -350,10 +378,10 @@ const galleryImages = [
 <style>
 @keyframes hover {
   0%, 100% {
-    transform: translateX(-50%) translateY(50%);
+    transform: translateY(50%);
   }
   50% {
-    transform: translateX(-50%) translateY(35%);
+    transform: translateY(35%);
   }
 }
 
