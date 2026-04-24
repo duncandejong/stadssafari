@@ -112,7 +112,7 @@ export default defineNuxtConfig({
         public: {
             siteUrl: "https://stadssafaritheater.nl",
             siteTitle: "Stadssafari",
-            googleTagManagerId: "GTM-XXX",
+            googleTagManagerId: "GTM-KBHVTJR3",
             movieTitle: "Stadssafari",
             mooveeApiKey: process.env.NUXT_PUBLIC_MOOVEE_API_KEY ?? 'MV-XXX',
             cookiebotId: "4fc87e11-859f-4648-883e-1b8539791265",
