@@ -279,10 +279,10 @@
         <!--                  class="text-sm md:text-base underline hover:no-underline text-center text-primary-lightest px-1 rounded-sm">-->
         <!--          Privacyverklaring-->
         <!--        </NuxtLink>-->
-        <NuxtLink v-if="cookieBot" to="/cookieverklaring" target="_blank"
-                  class="text-sm md:text-base underline hover:no-underline text-center text-primary-lightest px-1 rounded-sm">
-          Cookieverklaring
-        </NuxtLink>
+        <!--        <NuxtLink v-if="cookieBot" to="/cookieverklaring" target="_blank"-->
+        <!--                  class="text-sm md:text-base underline hover:no-underline text-center text-primary-lightest px-1 rounded-sm">-->
+        <!--          Cookieverklaring-->
+        <!--        </NuxtLink>-->
       </div>
     </div>
   </section>
