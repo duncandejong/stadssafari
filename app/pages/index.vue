@@ -124,7 +124,7 @@
     <NuxtImg
         src="/bee-1.png"
         alt="Bee"
-        class="w-8 md:w-12 lg:w-16 absolute bottom-4 right-1/6 -translate-x-1/2 translate-y-full z-10"
+        class="w-8 md:w-12 lg:w-16 absolute bottom-0 right-1/6 -translate-x-1/2 translate-y-1/2 z-10 animate-hover"
         loading="lazy"
     />
     <div class="site-width">
@@ -348,6 +348,19 @@ const galleryImages = [
 </script>
 
 <style>
+@keyframes hover {
+  0%, 100% {
+    transform: translateX(-50%) translateY(50%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(35%);
+  }
+}
+
+.animate-hover {
+  animation: hover 3s ease-in-out infinite;
+}
+
 .section-gallery {
   background-color: var(--color-neutral-200);
   background-image: url("/bg-gallery.jpg");
