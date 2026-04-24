@@ -144,15 +144,23 @@
           class="grid md:grid-cols-3 justify-center gap-6 items-center"
       >
 
-        <NuxtImg
-            alt="Poster"
-            v-bind:src="movie.poster"
-            sizes="sm:400px md:750px"
-            format="avif,webp"
-            placeholder
-            class="max-h-87.5 md:max-h-162.5 mx-auto object-contain rounded md:rounded-lg select-none pointer-events-none shadow md:shadow-lg shadow-neutral-200"
-            loading="lazy"
-        />
+        <div class="relative mx-auto">
+          <NuxtImg
+              alt="Poster"
+              v-bind:src="movie.poster"
+              sizes="sm:400px md:750px"
+              format="avif,webp"
+              placeholder
+              class="max-h-87.5 md:max-h-162.5 mx-auto object-contain rounded md:rounded-lg select-none pointer-events-none shadow md:shadow-lg shadow-neutral-200"
+              loading="lazy"
+          />
+          <NuxtImg
+              src="/ladybug.png"
+              alt="Ladybug"
+              class="w-8 md:w-12 absolute bottom-10 -left-4 md:-left-6 z-10"
+              loading="lazy"
+          />
+        </div>
 
         <div class="md:order-2 md:col-span-2 p-4 md:p-0">
           <!--          <h3 class="text-xl md:text-2xl font-semibold text-secondary">-->
