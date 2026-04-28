@@ -375,7 +375,7 @@ const footerLogos = [
   {img: "/logo-provincie-zuid-holland.png", alt: "Provincie Zuid Holland"},
   {img: "/logo-tauw.png", alt: "Tauw"},
   {img: "/logo-nl-adviseurs.png", alt: "NL Adviseurs"},
-  {img: "/logo-collectief-natuurinclusief.png", alt: "Collectief Natuurinclusief"},
+  {img: "/logo-collectief-natuurinclusief-3.png", alt: "Collectief Natuurinclusief"},
   {img: "/logo-waternet-gemeente-amsterdam.png", alt: "Waternet Gemeente Amsterdam"},
   {img: "/logo-donker-groep.png", alt: "Donker Groep"},
   {img: "/logo-mn-media-white.png", alt: "MN Media"},
