@@ -154,12 +154,12 @@
               class="max-h-87.5 md:max-h-162.5 mx-auto object-contain rounded md:rounded-lg select-none pointer-events-none shadow md:shadow-lg shadow-neutral-200"
               loading="lazy"
           />
-          <NuxtImg
-              src="/ladybug.png"
-              alt="Ladybug"
-              class="w-8 md:w-12 absolute bottom-10 -left-4 md:-left-6 z-10"
-              loading="lazy"
-          />
+          <!--          <NuxtImg-->
+          <!--              src="/ladybug.png"-->
+          <!--              alt="Ladybug"-->
+          <!--              class="w-8 md:w-12 absolute bottom-10 -left-4 md:-left-6 z-10"-->
+          <!--              loading="lazy"-->
+          <!--          />-->
         </div>
 
         <div class="md:order-2 md:col-span-2 p-4 md:p-0">
@@ -193,7 +193,36 @@
     </div>
   </section>
 
-  <section class="section-padding bg-neutral-100" id="over-luc">
+  <section class="section-padding bg-secondary-darker">
+    <div class="site-width max-w-225">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-l-4 border-primary relative">
+          <NuxtImg
+              src="/ladybug.png"
+              alt="Ladybug"
+              class="w-8 md:w-10 absolute -left-4 top-4 z-10"
+              loading="lazy"
+          />
+          <blockquote class="prose italic lg:text-lg font-serif text-neutral-700">
+            “Vanuit de ruimte zag ik hoe bijzonder het leven op aarde is. Maar je hoeft niet 400 kilometer omhoog om
+            verwonderd te raken. Stadssafari laat zien dat de meest spectaculaire natuur gewoon om de hoek leeft. Ga
+            Kijken!”
+          </blockquote>
+          <cite class="block mt-4 font-title text-secondary-dark not-italic">— André Kuipers (astronaut)</cite>
+        </div>
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-l-4 border-secondary-light">
+          <blockquote class="prose italic lg:text-lg font-serif text-neutral-700">
+            “Om mensen in beweging en meer met groen en natuur te doen moet je ze te weten te raken en te inspireren.
+            Dat is precies wat er gebeurt tijdens de theatershow Stadssafari met Luc Hoogenstein”
+          </blockquote>
+          <cite class="block mt-4 font-title text-secondary-dark not-italic">— Lodewijk Hoekstra (de bekendste tuinman
+            van Nederland)</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-neutral-200" id="over-luc">
     <div class="site-width max-w-225">
       <div class="grid md:grid-cols-3 gap-4 items-center">
         <div class="md:col-span-1 md:order-2 justify-center items-center flex">
