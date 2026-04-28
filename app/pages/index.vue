@@ -193,7 +193,7 @@
     </div>
   </section>
 
-  <section class="section-padding bg-secondary-darker">
+  <section class="section-padding bg-linear-to-br from-secondary-dark to-tertiary-dark">
     <div class="site-width max-w-225">
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-l-4 border-primary relative">
