@@ -278,9 +278,8 @@
         <Icon name="ion:ticket" class="icon"/>
       </h3>
       <div class=" sm:text-base md:text-lg lg:text-lg relative z-10  font-serif">
-        <div>
-          De kaartverkoop voor Stadssafari gaat binnenkort van start. Houd deze pagina in de gaten.
-        </div>
+        <iframe src=https://www.impactentertainment.nl/voorstelling/stadssafari-2627/speellijst-iframe frameBorder="0"
+                width="100%" height="577"></iframe>
       </div>
     </div>
 
@@ -382,15 +381,11 @@ const footerLogos = [
 ];
 const galleryImages = [
   {
-    img: "/stadssafari-01.jpg",
+    img: "/stadssafari-03.jpg",
     alt: "Stadssafari"
   },
   {
     img: "/stadssafari-02.jpg",
-    alt: "Stadssafari"
-  },
-  {
-    img: "/stadssafari-03.jpg",
     alt: "Stadssafari"
   },
   {
@@ -403,6 +398,10 @@ const galleryImages = [
   },
   {
     img: "/stadssafari-06.jpg",
+    alt: "Stadssafari"
+  },
+  {
+    img: "/stadssafari-01.jpg",
     alt: "Stadssafari"
   }
 ];

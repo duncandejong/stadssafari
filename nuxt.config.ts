@@ -106,6 +106,19 @@ export default defineNuxtConfig({
             // Prevent CSS sourcemaps during dev/build unless you explicitly need them.
             devSourcemap: false,
         },
+        optimizeDeps: {
+            include: [
+                '@vue/devtools-core',
+                '@vue/devtools-kit',
+                '@gtm-support/vue-gtm',
+                'vue-final-modal',
+                'gsap',
+                'gsap/ScrollTrigger',
+                'swiper',
+                'swiper/modules',
+                '@vimeo/player',
+            ]
+        }
     },
     runtimeConfig: {
         // Keys within public, will be also exposed to the client-side
