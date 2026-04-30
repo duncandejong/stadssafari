@@ -272,7 +272,7 @@
     <ClientOnly>
       <FloatingButton/>
     </ClientOnly>
-    <div class="max-w-3xl mx-auto z-10 relative">
+    <div class="site-width mx-auto z-10 relative">
       <h3 class="section-heading flex text-neutral-800 items-center gap-3">
         Tickets
         <Icon name="ion:ticket" class="icon"/>

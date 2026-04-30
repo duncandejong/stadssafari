@@ -91,7 +91,7 @@ export default defineNuxtConfig({
         "@vueuse/nuxt",
         "nuxt-svgo",
         // "@dargmuesli/nuxt-cookie-control",
-        "@pinia/nuxt",
+        // "@pinia/nuxt",
         "@nuxt/image",
         "@nuxtjs/seo"],
     vite: {
