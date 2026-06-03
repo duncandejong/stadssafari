@@ -283,7 +283,7 @@
             src="https://www.impactentertainment.nl/voorstelling/stadssafari-2627/speellijst-iframe"
             frameBorder="0"
             width="100%"
-            :height="iframeHeight"
+            :height="displayIframeHeight"
             @load="requestIframeHeight"
         ></iframe>
       </div>
@@ -335,6 +335,7 @@
 
 <script setup lang="ts">
 import {computed, onMounted, onUnmounted, ref} from 'vue'
+import {useWindowSize} from '@vueuse/core'
 import {useDateFormat} from "~/composables/useDateFormat";
 import {useVfm} from "vue-final-modal";
 import {useGtm} from "@gtm-support/vue-gtm";
@@ -412,11 +413,19 @@ const galleryImages = [
   }
 ];
 
+const {width} = useWindowSize()
+
 const ticketsIframe = ref<HTMLIFrameElement | null>(null)
 const DEFAULT_IFRAME_HEIGHT = import.meta.client
     ? Math.max(Math.round(window.innerHeight * 1.2), 1500)
     : 1500
 const iframeHeight = ref(DEFAULT_IFRAME_HEIGHT)
+const displayIframeHeight = computed(() => {
+  if (width.value >= 1075) {
+    return Math.min(iframeHeight.value, 860)
+  }
+  return iframeHeight.value
+})
 const MIN_IFRAME_HEIGHT = DEFAULT_IFRAME_HEIGHT
 const iframeOrigin = 'https://www.impactentertainment.nl'
 let iframeRequestTimers: number[] = []
