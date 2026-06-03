@@ -278,8 +278,14 @@
         <Icon name="ion:ticket" class="icon"/>
       </h3>
       <div class=" sm:text-base md:text-lg lg:text-lg relative z-10  font-serif">
-        <iframe src=https://www.impactentertainment.nl/voorstelling/stadssafari-2627/speellijst-iframe frameBorder="0"
-                width="100%" height="577"></iframe>
+        <iframe
+            ref="ticketsIframe"
+            src="https://www.impactentertainment.nl/voorstelling/stadssafari-2627/speellijst-iframe"
+            frameBorder="0"
+            width="100%"
+            :height="iframeHeight"
+            @load="requestIframeHeight"
+        ></iframe>
       </div>
     </div>
 
@@ -328,7 +334,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from 'vue'
+import {computed, onMounted, onUnmounted, ref} from 'vue'
 import {useDateFormat} from "~/composables/useDateFormat";
 import {useVfm} from "vue-final-modal";
 import {useGtm} from "@gtm-support/vue-gtm";
@@ -405,6 +411,126 @@ const galleryImages = [
     alt: "Stadssafari"
   }
 ];
+
+const ticketsIframe = ref<HTMLIFrameElement | null>(null)
+const DEFAULT_IFRAME_HEIGHT = import.meta.client
+    ? Math.max(Math.round(window.innerHeight * 1.2), 1500)
+    : 1500
+const iframeHeight = ref(DEFAULT_IFRAME_HEIGHT)
+const MIN_IFRAME_HEIGHT = DEFAULT_IFRAME_HEIGHT
+const iframeOrigin = 'https://www.impactentertainment.nl'
+let iframeRequestTimers: number[] = []
+let messageListenerAttached = false
+
+const extractIframeHeight = (data: unknown): number | null => {
+  if (typeof data === 'number' && Number.isFinite(data)) {
+    return Math.max(MIN_IFRAME_HEIGHT, Math.round(data))
+  }
+
+  if (typeof data === 'string') {
+    const trimmed = data.trim()
+
+    try {
+      const parsed = JSON.parse(trimmed)
+      const parsedHeight: number | null = extractIframeHeight(parsed)
+      if (parsedHeight) return parsedHeight
+    } catch {
+      // Not JSON, fall through to regex-based parsing below.
+    }
+
+    const match = trimmed.match(/(?:height|iframeHeight|contentHeight)\s*[:=]\s*"?(\d+(?:\.\d+)?)\s*px?"?/i)
+    if (match?.[1]) {
+      return Math.max(MIN_IFRAME_HEIGHT, Math.round(Number(match[1])))
+    }
+  }
+
+  if (data && typeof data === 'object') {
+    const candidates = [
+      (data as { height?: unknown }).height,
+      (data as { iframeHeight?: unknown }).iframeHeight,
+      (data as { contentHeight?: unknown }).contentHeight,
+      (data as { bodyHeight?: unknown }).bodyHeight,
+      (data as { documentHeight?: unknown }).documentHeight,
+      (data as { pageHeight?: unknown }).pageHeight,
+      (data as { scrollHeight?: unknown }).scrollHeight,
+      (data as { offsetHeight?: unknown }).offsetHeight,
+      (data as { clientHeight?: unknown }).clientHeight,
+      (data as { newHeight?: unknown }).newHeight,
+      (data as { frameHeight?: unknown }).frameHeight,
+      (data as { h?: unknown }).h
+    ]
+
+    for (const candidate of candidates) {
+      if (typeof candidate === 'number' && Number.isFinite(candidate)) {
+        return Math.max(MIN_IFRAME_HEIGHT, Math.round(candidate))
+      }
+
+      if (typeof candidate === 'string') {
+        const parsed = Number(candidate.replace('px', '').trim())
+        if (Number.isFinite(parsed)) {
+          return Math.max(MIN_IFRAME_HEIGHT, Math.round(parsed))
+        }
+      }
+    }
+
+    const numericValues = Object.values(data).filter((value): value is number => typeof value === 'number' && Number.isFinite(value))
+    const likelyHeight = numericValues
+        .filter((value) => value >= MIN_IFRAME_HEIGHT && value <= 20000)
+        .sort((a, b) => b - a)[0]
+
+    if (likelyHeight) {
+      return Math.max(MIN_IFRAME_HEIGHT, Math.round(likelyHeight))
+    }
+  }
+
+  return null
+}
+
+const handleMessage = (event: MessageEvent) => {
+  let hostname = ''
+
+  try {
+    hostname = new URL(event.origin).hostname
+  } catch {
+    return
+  }
+
+  if (hostname !== 'impactentertainment.nl' && !hostname.endsWith('.impactentertainment.nl')) return
+
+  const height = extractIframeHeight(event.data)
+  if (height) {
+    iframeHeight.value = height
+  }
+}
+
+const requestIframeHeight = () => {
+  const iframeWindow = ticketsIframe.value?.contentWindow
+  if (!iframeWindow) return
+
+  iframeWindow.postMessage({type: 'request-height'}, iframeOrigin)
+}
+
+onMounted(() => {
+  if (!messageListenerAttached) {
+    window.addEventListener('message', handleMessage)
+    messageListenerAttached = true
+  }
+  iframeRequestTimers = [window.setTimeout(requestIframeHeight, 250), window.setTimeout(requestIframeHeight, 1500)]
+})
+
+onUnmounted(() => {
+  if (messageListenerAttached) {
+    window.removeEventListener('message', handleMessage)
+    messageListenerAttached = false
+  }
+  iframeRequestTimers.forEach((timer) => window.clearTimeout(timer))
+  iframeRequestTimers = []
+})
+
+if (import.meta.client && !messageListenerAttached) {
+  window.addEventListener('message', handleMessage)
+  messageListenerAttached = true
+}
 
 
 </script>
